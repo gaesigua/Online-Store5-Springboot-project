@@ -17,8 +17,34 @@ public class OnlineStoreApp {
 
 		System.out.println("=======================================================");
 
-		MyFirstService myFirstService = context.getBean("bean3", MyFirstService.class);
+		MyFirstClass myFirstClass1 = context.getBean("bean2", MyFirstClass.class);
+
+		System.out.println(myFirstClass1.sayHello());
+
+		System.out.println("=======================================================");
+
+		MyFirstService myFirstService = context.getBean(MyFirstService.class);
 
 		System.out.println(myFirstService.greetEveryone());
+
+		System.out.println("=====================================================");
+
+//		System.out.println(myFirstService.getJavaVersion());
+
+		System.out.println("=======================================================");
+
+//		System.out.println(myFirstService.getOsName());
+
+		System.out.println("=========================================================");
+
+//		System.out.println(myFirstService.readServerPort());
+
+		System.out.println("=========================================================");
+
+		System.out.println(myFirstService.getMyCustomPropertyFromAnotherFile());
+
+		System.out.println("========================================================");
+
+		System.out.println(myFirstService.getAge());
 	}
 }

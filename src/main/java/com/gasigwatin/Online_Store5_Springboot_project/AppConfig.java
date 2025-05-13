@@ -20,4 +20,9 @@ public class AppConfig {
     public MyFirstClass myThirdBean(){
         return new MyFirstClass("Message from Third Bean");
     }
+
+    @Bean("bean4")
+    public MyFirstClass myFourthBean() {
+        return new MyFirstClass("Message from Fourth Bean");
+    }
 }

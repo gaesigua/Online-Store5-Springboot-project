@@ -2,26 +2,29 @@ package com.gasigwatin.Online_Store5_Springboot_project;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 @Configuration
 public class AppConfig {
 
-    @Bean("bean1")
+    @Bean
+    @Profile("dev")
     public MyFirstClass myFirstBean(){
-        return new MyFirstClass("Message from First Bean");
+        return new MyFirstClass("Das ist aus der Erste (First) Bean");
     }
 
-    @Bean("bean2")
+    @Bean
+    @Profile("dev")
     public MyFirstClass mySecondBean(){
-        return new MyFirstClass("Message from Second Bean");
+        return new MyFirstClass("Das ist aus der Zweite(Second) Bean");
     }
 
-    @Bean("bean3")
+    @Bean
     public MyFirstClass myThirdBean(){
-        return new MyFirstClass("Message from Third Bean");
+        return new MyFirstClass("Das ist aus der dritte(Third) Bean");
     }
 
-    @Bean("bean4")
+    @Bean
     public MyFirstClass myFourthBean() {
         return new MyFirstClass("Message from Fourth Bean");
     }
